@@ -38,6 +38,7 @@ $app->register(new Herrera\Pdo\PdoServiceProvider(),
                    'pdo.password' => $dbopts["pass"]
                )
 );
+*/
 ?>
 </body>
 </html>
