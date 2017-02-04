@@ -4,7 +4,8 @@
 	<title>Blah</title>
 </head>
 <body>
-First heroku app
+<h1>First heroku app</h1>
+
 <?php
 
 	$dbh = pg_connect("host= dbname= user= ");
