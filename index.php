@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Blah</title>
+	<title>Job Portal</title>
 </head>
 <body>
 <h1>First heroku app</h1>
