@@ -13,7 +13,7 @@
 	{
 		die("error".pg_last_error());
 	}
-	$sql = "SELECT * FROM job_type";
+	$sql = "SELECT * FROM job_search_results";
 	$result = pg_query($dbh,$sql);
 	if(!$result)
 	{
