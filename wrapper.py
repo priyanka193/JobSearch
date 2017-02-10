@@ -12,7 +12,8 @@ import uuid
 
 def database_insert():	
 	try:
-		connection = psycopg2.connect(database='jobportal', user = 'ankitasastry')
+#		connection = psycopg2.connect(database='jobportal', user = 'ankitasastry')
+		connection = psycopg2.connect("host='ec2-54-243-185-132.compute-1.amazonaws.com' dbname='d2ftjp5a24rakj' user='bgcdtjsazvveou' password='b8288eda378a650ad70687aff55ac3bdcd0f73dc634bc5f3a6a63847b4259308'")
 		cur = connection.cursor()
 		add_participant_data = "INSERT INTO PARTICIPANT(name,participant_id,email_addr,job_loc,job_keywords,job_type,num_job_post) VALUES(%s, %s, %s, %s, %s, %s, %s);"
 #		add_participant_data = "INSERT INTO PARTICIPANT (SELECT * FROM( VALUES(%s, %s, %s, %s, %s, %s, %s)) AS tmp(name, part_id, email, loc, keywds, type, num_post) WHERE NOT EXISTS ( SELECT 1 FROM PARTICIPANT WHERE participant_id = tmp.part_id));"
@@ -47,7 +48,9 @@ def database_insert():
 
 def call_scraper():
 	try:
-		connection = psycopg2.connect(database='jobportal', user = 'ankitasastry')
+#		connection = psycopg2.connect(database='jobportal', user = 'ankitasastry')
+		connection = psycopg2.connect("host='ec2-54-243-185-132.compute-1.amazonaws.com' dbname='d2ftjp5a24rakj' user='bgcdtjsazvveou' password='b8288eda378a650ad70687aff55ac3bdcd0f73dc634bc5f3a6a63847b4259308'")
+
 		cur = connection.cursor()
 		sql_select = "SELECT * FROM PARTICIPANT;"
 		sql_insert = "INSERT INTO JOB_SEARCH_RESULTS (job_search_id, participant_id, url, company, location, time_posted, job_title, snippet) VALUES (%s,%s,%s,%s,%s,%s,%s,%s);"
