@@ -8,7 +8,7 @@
 
 <?php
 
-	$dbh = pg_connect("host='ec2-54-243-185-132.compute-1.amazonaws.com' dbname='d2ftjp5a24rakj' user='bgcdtjsazvveou' password='b8288eda378a650ad70687aff55ac3bdcd0f73dc634bc5f3a6a63847b4259308'");
+	$dbh = pg_connect("connection = psycopg2.connect("host='ec2-54-243-185-132.compute-1.amazonaws.com' dbname='d2ftjp5a24rakj' user='bgcdtjsazvveou' password='b8288eda378a650ad70687aff55ac3bdcd0f73dc634bc5f3a6a63847b4259308'");
 	if(!$dbh)
 	{
 		die("error".pg_last_error());
